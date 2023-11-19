@@ -37,7 +37,14 @@ To get a local copy up and running follow these simple example steps.
    php artisan key:generate
    php artisan serve
    ```
+   
 6. Open the project on your browser like below
    ```js
     http://127.0.0.1:8000
+   ```
+   
+7. default admin credentials:
+   ```js
+    email: admin@admin.com
+   password: 123456789
    ```
