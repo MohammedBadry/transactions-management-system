@@ -22,7 +22,7 @@ To get a local copy up and running follow these simple example steps.
 
 3. Go to your phpMyAdmin and create new database
 
-4. Rename .env.example to .env and then enter your DB Settings in `dbConfig.php` in the root directory
+4. Rename .env.example to .env and then enter your DB Settings
    ```js
     DB_HOST=127.0.0.1
     DB_PORT=3306
