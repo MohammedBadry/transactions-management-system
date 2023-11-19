@@ -24,11 +24,11 @@ To get a local copy up and running follow these simple example steps.
 
 4. Rename .env.example to .env and then enter your DB Settings in `dbConfig.php` in the root directory
    ```js
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=transactions
-DB_USERNAME=root
-DB_PASSWORD=
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=transactions
+    DB_USERNAME=root
+    DB_PASSWORD=
    ```
 
 5. run these commands in terminal
