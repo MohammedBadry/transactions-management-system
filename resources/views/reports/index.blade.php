@@ -14,10 +14,10 @@
                     @csrf
                     <div class="row" style="padding: 15px">
                             <div class="col-md-4">
-                                <input type="date" class="form-control" name="from" id="from" value="{{$from}}" required>
+                                <input type="date" class="form-control" name="from" id="from" value="{{$from??''}}" required>
                             </div>
                             <div class="col-md-4">
-                                <input type="date" class="form-control" name="to" id="to" value="{{$to}}" required>
+                                <input type="date" class="form-control" name="to" id="to" value="{{$to??''}}" required>
                             </div>
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-primary">Generate</button>
