@@ -17,7 +17,7 @@ To get a local copy up and running follow these simple example steps.
    ```js
    composer install
    npm install
-   npm build
+   npm run build
    ```
 
 3. Go to your phpMyAdmin and create new database
