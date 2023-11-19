@@ -34,6 +34,7 @@ To get a local copy up and running follow these simple example steps.
 5. run these commands in terminal
    ```js
    php artisan migrate --seed
+   php artisan key:generate
    php artisan serve
    ```
 6. Open the project on your browser like below
