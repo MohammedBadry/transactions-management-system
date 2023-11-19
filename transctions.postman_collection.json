@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "aa208fc9-138e-4271-a298-b8c7dd3552fd",
+		"name": "transctions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8128415",
+		"_collection_link": "https://gold-satellite-5967.postman.co/workspace/Twseel~afb122b3-6312-4ad1-940b-3bbb329ce3b8/collection/8128415-aa208fc9-138e-4271-a298-b8c7dd3552fd?action=share&source=collection_link&creator=8128415"
+	},
+	"item": [
+		{
+			"name": "guest",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "New User",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mahamedbadry@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authenticated",
+			"item": [
+				{
+					"name": "user-routes",
+					"item": [
+						{
+							"name": "transactions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "admin-routes",
+					"item": [
+						{
+							"name": "transactions",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "amount",
+													"value": "1000",
+													"type": "text"
+												},
+												{
+													"key": "payer_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "due_on",
+													"value": "2024-01-01",
+													"type": "text"
+												},
+												{
+													"key": "vat",
+													"value": "100",
+													"type": "text"
+												},
+												{
+													"key": "vat_inclusive",
+													"value": "0",
+													"description": "0 for no - 1 for yes",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/transactions",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"transactions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "transactions",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/transactions",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"transactions"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "payments",
+							"item": [
+								{
+									"name": "transaction-payments",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/transactions/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"transactions",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "transaction_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "amount",
+													"value": "2000",
+													"type": "text"
+												},
+												{
+													"key": "paid_on",
+													"value": "2023-01-01",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/payments",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"payments"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "reports",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "from",
+													"value": "2023-01-01",
+													"type": "text"
+												},
+												{
+													"key": "to",
+													"value": "2023-12-30",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/generate-report",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"generate-report"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "5|VXjmu2GKiVkZRz9Ec3jRBjKkBWlhDg9IaWqdvzzo0a761e11",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
